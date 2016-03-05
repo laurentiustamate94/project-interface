@@ -4,8 +4,10 @@ namespace Interface.Interfaces
 {
     public interface IImageProcessing
     {
-        Task<object> AnalyzeImage(string imagePathOrUrl);
+        Task<object> AnalyzeImage(string imagePath);
 
-        Task<string> RecognizeText(string imagePathOrUrl);
+        Task<string> GetDominantForegroundColor(string imagePath);
+
+        Task<string> RecognizeText(string imagePath);
     }
 }
