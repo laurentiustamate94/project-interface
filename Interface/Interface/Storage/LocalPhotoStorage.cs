@@ -42,5 +42,10 @@ namespace Interface.Storage
 
             LastPhotoSavedPath = ImageFile.Path;
         }
+
+        public string GetLastPhotoSaved()
+        {
+            return LastPhotoSavedPath;
+        }
     }
 }

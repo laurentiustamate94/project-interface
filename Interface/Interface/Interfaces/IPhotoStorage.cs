@@ -8,5 +8,7 @@ namespace Interface.Interfaces
         Task Save(string filename);
 
         Task<BitmapImage> GetPhoto(string filename);
+
+        string GetLastPhotoSaved();
     }
 }
