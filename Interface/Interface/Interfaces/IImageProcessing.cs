@@ -9,5 +9,7 @@ namespace Interface.Interfaces
         Task<string> GetDominantForegroundColor(string imagePath);
 
         Task<string> RecognizeText(string imagePath);
+
+        Task<bool> RecognizeFace(string imagePath);
     }
 }
