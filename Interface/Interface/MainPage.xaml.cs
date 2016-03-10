@@ -43,6 +43,8 @@ namespace Interface
 
             interogationResult.Text = "Hello my dear friend !!";
 
+            PlayText(interogationResult.Text);
+
             cameraElement.Source = mediaDevice;
 
             await mediaDevice.StartPreviewAsync();
