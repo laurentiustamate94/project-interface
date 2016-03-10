@@ -86,7 +86,7 @@ namespace Interface
 
         private void ResetButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-
+            interogationResult.Text = "Hello my dear friend !!";
         }
     }
 }
