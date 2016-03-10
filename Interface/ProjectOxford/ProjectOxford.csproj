@@ -107,6 +107,13 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Emotion\Common\ClientError.cs" />
+    <Compile Include="Emotion\Common\ClientException.cs" />
+    <Compile Include="Emotion\Common\Rectangle.cs" />
+    <Compile Include="Emotion\Contract\Emotion.cs" />
+    <Compile Include="Emotion\Contract\Scores.cs" />
+    <Compile Include="Emotion\EmotionServiceClient.cs" />
+    <Compile Include="Emotion\IEmotionServiceClient.cs" />
     <Compile Include="Face\Contract\AddPersistedFaceResult.cs" />
     <Compile Include="Face\Contract\Candidate.cs" />
     <Compile Include="Face\Contract\ClientError.cs" />
