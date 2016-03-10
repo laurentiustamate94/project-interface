@@ -39,7 +39,7 @@ namespace Interface
             await localCameraImageSource.InitializeDevice();
 
             interogationResult.Text = "Hello my dear friend !!";
-              
+
             cameraElement.Source = mediaDevice;
 
             await mediaDevice.StartPreviewAsync();
@@ -63,9 +63,16 @@ namespace Interface
             interogationResult.Text = result;
         }
 
-        private void AmIFamiliarButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void AmIFamiliarButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            await localPhotoStorage.Save(PHOTO_FILE_NAME);
 
+            var result = await imageProcessing.RecognizeFace(localPhotoStorage.GetLastPhotoSaved());
+
+            if (result)
+                interogationResult.Text = string.Format("Hello !! It's glad to see you !!");
+            else
+                interogationResult.Text = string.Format("I do not recognize you, I'm sorry !!");
         }
 
         private void WhatsMyMoodButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
