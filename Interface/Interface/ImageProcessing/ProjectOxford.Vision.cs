@@ -8,10 +8,8 @@ namespace Interface.ImageProcessing
 
     public partial class ProjectOxford : IImageProcessing
     {
-        private const string VISION_API_HOST = "https://api.projectoxford.ai/vision/v1";
-        private const string VISION_API_QUERY = "analyses";
         private const string VISION_API_KEY = "___YOUR_API_KEY___";
-
+        
         public async Task<object> AnalyzeImage(string imagePath)
         {
             var result = string.Empty;
