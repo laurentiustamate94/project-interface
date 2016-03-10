@@ -89,6 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Compile Include="ImageProcessing\ProjectOxford.Emotion.cs" />
     <Compile Include="ImageProcessing\ProjectOxford.Face.cs" />
     <Compile Include="ImageProcessing\ProjectOxford.Vision.cs" />
     <None Include="project.json" />

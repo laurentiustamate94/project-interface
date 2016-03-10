@@ -11,5 +11,7 @@ namespace Interface.Interfaces
         Task<string> RecognizeText(string imagePath);
 
         Task<bool> RecognizeFace(string imagePath);
+
+        Task<string> RecognizeEmotion(string imagePath);
     }
 }
