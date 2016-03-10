@@ -38,6 +38,7 @@
                 <Canvas x:Name="cameraCanvas" Grid.Row="1" Grid.Column="0" Width="480" Height="320" Background="Gray"  Margin="0,0,0,0" Visibility="Visible">
                     <CaptureElement x:Name="cameraElement" Width="480" Height="320" HorizontalAlignment="Left" Visibility="Visible"/>
                 </Canvas>
+                <MediaElement x:Name="mediaElementUI" Visibility="Collapsed" />
             </StackPanel>
         </StackPanel>
 
@@ -48,6 +49,5 @@
 				x:Name="interogationResult" TextWrapping="Wrap" IsReadOnly="True" Height="200" Width="480" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
 				ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
         </ScrollViewer>
-
     </Grid>
 </Page>
