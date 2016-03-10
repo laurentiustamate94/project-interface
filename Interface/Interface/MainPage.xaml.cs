@@ -75,9 +75,13 @@ namespace Interface
                 interogationResult.Text = string.Format("I do not recognize you, I'm sorry !!");
         }
 
-        private void WhatsMyMoodButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void WhatsMyMoodButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            await localPhotoStorage.Save(PHOTO_FILE_NAME);
 
+            var result = await imageProcessing.RecognizeEmotion(localPhotoStorage.GetLastPhotoSaved());
+
+            interogationResult.Text = string.Format("Your emotion is: {0}", result);
         }
 
         private void ResetButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
